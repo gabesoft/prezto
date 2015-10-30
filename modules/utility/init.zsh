@@ -108,6 +108,9 @@ alias lA='ls -lhAF'
 alias rr='rm -f -r -v'
 alias cr='cp -f -r -v'
 
+alias nis='npm install --save'
+alias nid='npm install --save-dev'
+
 alias exusr='chmod u+x'           # give execute permissions to current user
 alias exall='chmod ugo+x'         # give execute permissions to all users
 
