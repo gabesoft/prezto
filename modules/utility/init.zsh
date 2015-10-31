@@ -109,6 +109,7 @@ alias rr='rm -f -r -v'
 alias cr='cp -f -r -v'
 
 alias nis='npm install --save'
+alias nig='npm install -g'
 alias nid='npm install --save-dev'
 
 alias exusr='chmod u+x'           # give execute permissions to current user
