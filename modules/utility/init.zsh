@@ -115,6 +115,9 @@ alias nid='npm install --save-dev'
 alias exusr='chmod u+x'           # give execute permissions to current user
 alias exall='chmod ugo+x'         # give execute permissions to all users
 
+# tmux
+alias takeover="tmux detach -a"
+
 # Grep
 if zstyle -t ':prezto:module:utility:grep' color; then
   export GREP_COLOR='37;45'           # BSD.
