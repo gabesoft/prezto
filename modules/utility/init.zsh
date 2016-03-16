@@ -104,6 +104,8 @@ alias lc='lt -c'         # Lists sorted by date, most recent last, shows change 
 alias lu='lt -u'         # Lists sorted by date, most recent last, shows access time.
 alias sl='ls'            # I often screw this up.
 
+alias yum='yum -y'
+
 alias lA='ls -lhAF'
 alias rr='rm -f -r -v'
 alias cr='cp -f -r -v'
