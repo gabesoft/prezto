@@ -120,6 +120,8 @@ alias exall='chmod ugo+x'         # give execute permissions to all users
 
 # tmux
 alias takeover="tmux detach -a"
+# tmux attach to a session while detaching other clients
+alias tmuxat="tmux attach-session -dt "
 
 # Grep
 if zstyle -t ':prezto:module:utility:grep' color; then
