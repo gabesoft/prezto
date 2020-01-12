@@ -41,9 +41,12 @@ alias ftp='noglob ftp'
 alias history='noglob history'
 alias locate='noglob locate'
 alias rake='noglob rake'
-alias rsync='noglob rsync'
+# alias rsync='noglob rsync'
 alias scp='noglob scp'
 alias sftp='noglob sftp'
+
+# Rsync
+# alias rsync="rsync --no-owner --no-group"
 
 # Define general aliases.
 alias _='sudo'
@@ -131,6 +134,28 @@ alias exall='chmod ugo+x'         # give execute permissions to all users
 alias takeover="tmux detach -a"
 # tmux attach to a session while detaching other clients
 alias tmuxat="tmux attach-session -dt "
+
+# path
+export PATH=/usr/local/bin:$PATH
+
+# quip
+export QUIP_SOURCE_ROOT="$HOME/quip"
+export ANDROID_NDK=$HOME/android-ndk-r10d
+export ANDROID_SDK=$HOME/android-sdk-macosx
+
+export PATH=$ANDROID_SDK/tools:$PATH
+export PATH=$ANDROID_SDK/tools/bin:$PATH
+export PATH=$ANDROID_SDK/platform-tools:$PATH
+export PATH=$ANDROID_NDK:$PATH
+export PATH=$QUIP_SOURCE_ROOT/android/tools:$PATH
+
+alias dd="$QUIP_SOURCE_ROOT/bin/docker-devel"
+alias protoclean="bin/command make proto-clean; bin/command make proto; dd setupprotobufutil"
+alias protobuild="dd recompile; dd setupprotobufutil"
+alias quip-shell="nix-shell -p quip-env python-env --run 'fish'"
+alias quip-shell-stable="nix-shell -p quip-env python-env --run 'fish' -I nixpkgs=$HOME/.nix-defexpr/channels/nixos/nixpkgs/"
+alias enable-https="dd enable https; dd stop all; dd up; dd updatenginx"
+alias disable-https="dd disable https; dd up; dd updatenginx"
 
 # Grep
 if zstyle -t ':prezto:module:utility:grep' color; then
