@@ -11,7 +11,9 @@
 pmodload 'helper' 'spectrum'
 
 # Correct commands.
-setopt CORRECT
+if zstyle -T ':prezto:module:utility' correct; then
+  setopt CORRECT
+fi
 
 #
 # Aliases
@@ -62,6 +64,12 @@ alias rm="${aliases[rm]:-rm}"
 alias type='type -a'
 
 alias cdd='cd -'
+
+# Safe ops. Ask the user before doing anything destructive.
+# alias rmi="${aliases[rm]:-rm} -i"
+# alias mvi="${aliases[mv]:-mv} -i"
+# alias cpi="${aliases[cp]:-cp} -i"
+# alias lni="${aliases[ln]:-ln} -i"
 
 # ls
 if is-callable 'dircolors'; then
