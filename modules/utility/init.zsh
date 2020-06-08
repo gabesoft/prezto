@@ -115,6 +115,7 @@ alias lt='ll -t'         # Lists sorted by date, most recent first.
 alias lc='lt -c'         # Lists sorted by date, most recent last, shows change time.
 alias lu='lt -u'         # Lists sorted by date, most recent last, shows access time.
 alias sl='ls'            # I often screw this up.
+alias exal='exa -lagGh'  # See https://github.com/ogham/exa for exa options (or exa --help)
 
 alias yum='yum -y'
 
@@ -137,6 +138,10 @@ alias tmuxat="tmux attach-session -dt "
 
 # path
 export PATH=/usr/local/bin:$PATH
+
+if [[ -d $HOME/work/git-fuzzy/bin ]]; then
+    export PATH=$HOME/work/git-fuzzy/bin:$PATH
+fi
 
 # quip
 export QUIP_SOURCE_ROOT="$HOME/quip"
